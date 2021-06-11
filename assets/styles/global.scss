@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+html, body {
+  background-color: #000;
+  padding: 0;
+  margin: 0;
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+}
+
+img, h1, h2, h3, h4, h6, p, button {
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.default-button {
+  transition: background-color 0.5s ease;
+  background-color: #f2e73a;
+  color: #000;
+  height: 4rem;
+  transition: width 0.1s ease;
+  width: 15rem;
+  border-radius: 5px;
+  font-size: 1.3rem;
+  letter-spacing: -2px;
+  cursor: pointer;
+  &:hover, &:active {
+    background-color: #dca918;
+  }
+  &:hover {
+    width: 15.5rem;
+  }
+}
+
+// My Animation Content
+// Left Animation
+.animeLeft {
+  transform: translate(-50px);
+  opacity: 0;
+  animation: animeLeft .3s forwards;
+}
+@keyframes animeLeft {
+  to {
+    transform: initial;
+    opacity: initial;
+  }
+}
+// Right Animation
+.animeRight {
+  transform: translate(50px);
+  opacity: 0;
+  animation: animeRight .3s forwards;
+}
+@keyframes animeRight {
+  to {
+    transform: initial;
+    opacity: initial;
+  }
+}
+
