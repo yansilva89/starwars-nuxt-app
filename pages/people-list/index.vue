@@ -1,13 +1,7 @@
 <template>
-  <div>
-    <div class="wrapper">
-      <header>
-        <Logo class="animeLeft" width="12rem" />
-      </header>
-      <div v-for="(person, i) in people.results" :key="i" class="list">
-        {{ person.name }}
-      </div>
-      <Button class="animeRight" btn-text="voltar para início" @click="() => handleClick()" />
+  <div class="wrapper">
+    <div v-for="(person, i) in people.results" :key="i" class="list">
+      {{ person.name }}
     </div>
   </div>
 </template>
@@ -30,17 +24,3 @@ export default vue.extend({
   }
 })
 </script>
-
-<style lang="scss">
-  header {
-    display: flex;
-    justify-content: center;
-  }
-  .list {
-    color: #fff;
-  }
-  button {
-    background-color: #fff;
-    color: #000;
-  }
-</style>

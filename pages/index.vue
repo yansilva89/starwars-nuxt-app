@@ -13,7 +13,7 @@
             <h1>seja bem vindo à star wars app</h1>
             <p>aqui você conhecerá todo o básico do universo star wars - personagens, planetas, aeronaves, filmes, etc. clique no botão de acesso e divirta-se!</p>
           </div>
-          <Button class="animeRight" btn-text="visualizar lista" @click="() => handleClick()" />
+          <Button class="animeRight" btn-text="visualizar listas" @click="() => handleClick()" />
         </div>
       </template>
     </DivPage>
@@ -25,7 +25,7 @@ import vue from 'vue'
 export default vue.extend({
   methods: {
     handleClick () {
-      this.$router.push('/people-list')
+      this.$router.push('/list-links')
     }
   }
 })
