@@ -1,5 +1,6 @@
 <template>
-  <div class="card-link" @click="() => $emit('click')">
+  <div class="card-link" @click="() => handleClick()">
+    <img :src="cardImg" alt="">
     <h3>{{ cardText }}</h3>
   </div>
 </template>
@@ -8,9 +9,22 @@
 import Vue from 'vue'
 export default Vue.extend({
   props: {
+    cardImg: {
+      type: String,
+      default: null
+    },
     cardText: {
       type: String,
       default: null
+    },
+    endpoint: {
+      type: String,
+      default: null
+    }
+  },
+  methods: {
+    handleClick () {
+      this.$router.push(this.endpoint)
     }
   }
 })
@@ -19,6 +33,7 @@ export default Vue.extend({
 <style lang="scss">
   .card-link {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     transition: background-color 0.5s ease;
@@ -36,7 +51,11 @@ export default Vue.extend({
     &:last-child {
       margin-right: 0;
     }
+    img {
+      width: 5rem;
+    }
     h3 {
+      margin-top: 1rem;
       color: #000;
     }
   }
