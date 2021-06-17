@@ -36,9 +36,10 @@ export default Vue.extend({
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     transition: background-color 0.5s ease;
     background-color: #f1e63a;
-    width: calc(100% / 5 - 1rem);
+    width: calc(100% / 5);
     margin-right: 1rem;
     min-height: 5rem;
     border-radius: 5px;
@@ -48,7 +49,7 @@ export default Vue.extend({
     &:hover {
       background-color: #dca918;
     }
-    &:last-child {
+    &:nth-child(5n) {
       margin-right: 0;
     }
     img {

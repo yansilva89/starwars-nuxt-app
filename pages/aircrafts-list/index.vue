@@ -5,12 +5,12 @@
     </header>
     <div class="cards-content">
       <CardLink
-        v-for="(person, i) in people.results"
+        v-for="(starship, i) in starships.results"
         :key="i"
         class="animeRight"
         :card-img="require('~/assets/images/avatars/r2d2.svg')"
-        :card-text="person.name"
-        endpoint="/people-list"
+        :card-text="starship.name"
+        endpoint="/aircrafts-list"
       />
     </div>
   </div>
@@ -21,8 +21,8 @@ import vue from 'vue'
 export default vue.extend({
   async asyncData ({ $axios }) {
     try {
-      const people = await $axios.$get('people/')
-      return { people }
+      const starships = await $axios.$get('starships/')
+      return { starships }
     } catch (error) {
       return error
     }

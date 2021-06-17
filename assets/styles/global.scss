@@ -23,6 +23,16 @@ img, h1, h2, h3, h4, h6, p, button, a {
 
 .wrapper {
   padding: 0 1rem;
+  header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2.5rem;
+  }
+}
+
+.cards-content {
+  display: flex;
+  width: 100%;
 }
 
 .default-button {

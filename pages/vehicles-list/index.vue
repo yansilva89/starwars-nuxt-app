@@ -3,14 +3,17 @@
     <header>
       <Logo class="animeLeft" width="12rem" />
     </header>
+    <div v-for="(vehicle, i) in vehicles.results" :key="i" class="list">
+      {{ vehicle.name }}
+    </div>
     <div class="cards-content">
       <CardLink
-        v-for="(person, i) in people.results"
+        v-for="(vehicle, i) in vehicles.results"
         :key="i"
         class="animeRight"
         :card-img="require('~/assets/images/avatars/r2d2.svg')"
-        :card-text="person.name"
-        endpoint="/people-list"
+        :card-text="vehicle.name"
+        endpoint="/vehicles-list"
       />
     </div>
   </div>
@@ -21,8 +24,8 @@ import vue from 'vue'
 export default vue.extend({
   async asyncData ({ $axios }) {
     try {
-      const people = await $axios.$get('people/')
-      return { people }
+      const vehicles = await $axios.$get('vehicles/')
+      return { vehicles }
     } catch (error) {
       return error
     }
