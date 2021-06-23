@@ -3,9 +3,6 @@
     <header>
       <Logo class="animeLeft" width="12rem" />
     </header>
-    <div v-for="(vehicle, i) in vehicles.results" :key="i" class="list">
-      {{ vehicle.name }}
-    </div>
     <div class="cards-content">
       <CardLink
         v-for="(vehicle, i) in vehicles.results"

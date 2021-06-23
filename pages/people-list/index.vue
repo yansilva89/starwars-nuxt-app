@@ -10,9 +10,10 @@
         class="animeRight"
         :card-img="require('~/assets/images/avatars/r2d2.svg')"
         :card-text="person.name"
-        endpoint="/people-list"
+        :endpoint="`/people-list/person/${i + 1}`"
       />
     </div>
+    <Button class="animeRight" btn-text="voltar" @click="() => handleClickToBack()" />
   </div>
 </template>
 
@@ -28,7 +29,7 @@ export default vue.extend({
     }
   },
   methods: {
-    handleClick () {
+    handleClickToback () {
       this.$router.push('/list-links')
     }
   }

@@ -22,6 +22,7 @@ export default Vue.extend({
     background-color: #f2e73a;
     color: #000;
     height: 4rem;
+    margin-top: 1rem;
     transition: width 0.1s ease;
     width: 15rem;
     border-radius: 5px;

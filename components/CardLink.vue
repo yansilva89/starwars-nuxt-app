@@ -24,7 +24,10 @@ export default Vue.extend({
   },
   methods: {
     handleClick () {
-      this.$router.push(this.endpoint)
+      if (this.endpoint) {
+        this.$router.push(this.endpoint)
+      }
+      this.$emit('click')
     }
   }
 })
@@ -39,18 +42,12 @@ export default Vue.extend({
     text-align: center;
     transition: background-color 0.5s ease;
     background-color: #f1e63a;
-    width: calc(100% / 5);
-    margin-right: 1rem;
     min-height: 5rem;
     border-radius: 5px;
     padding: 1rem;
-    margin-bottom: 1rem;
     cursor: pointer;
     &:hover {
       background-color: #dca918;
-    }
-    &:nth-child(5n) {
-      margin-right: 0;
     }
     img {
       width: 5rem;
