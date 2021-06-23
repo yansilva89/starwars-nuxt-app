@@ -17,6 +17,7 @@ export default Vue.extend({
   },
   mounted () {
     const idItem: string = this.$route.params.id
+    console.log('###TESTE ID', idItem)
   },
   methods: {
     handleClickToback () {
